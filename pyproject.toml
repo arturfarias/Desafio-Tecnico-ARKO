@@ -11,6 +11,7 @@ dependencies = [
     "taskipy (>=1.14.1,<2.0.0)",
     "django (>=5.2.4,<6.0.0)",
     "psycopg2-binary (>=2.9.10,<3.0.0)",
+    "requests (>=2.32.4,<3.0.0)",
 ]
 
 [tool.poetry]
@@ -21,4 +22,7 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
-nome = 'comando'
+run = 'python manage.py runserver'
+makemigrations = 'python manage.py makemigrations'
+migrate = 'python manage.py migrate'
+ibge = 'python manage.py ibge_import'

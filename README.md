@@ -41,6 +41,11 @@ Criar um usuario do tipo administrador
 python manage.py createsuperuser
 ```
 
+Popular o banco com os dados
+```
+python manage.py ibge_import
+```
+
 Executar o servidor de desenvolvimento
 ```
 python manage.py runserver
@@ -49,5 +54,11 @@ python manage.py runserver
 ## Comandos basicos
 O projeto se utiliza da ferramenta task para criar scripts com os comandos fundamentais que podem ser vistos abaixo:
 
-- **`comando`**  
-  Descrição. 
+- **`task run`**  
+  Executa o servidor de desenvolvimento.
+- **`task makemigrations`**  
+  Cria os arquivos de de migration do projeto.
+- **`task migrate`**  
+  Executa as migrations no banco de dados.
+- **`task ibge`**  
+  Popular ou atualiza o banco com os dados do IBGE.
