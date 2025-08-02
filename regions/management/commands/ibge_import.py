@@ -138,4 +138,3 @@ class Command(BaseCommand):
                     'municipality_id': district['municipio']['id']
                 }
             )
-
