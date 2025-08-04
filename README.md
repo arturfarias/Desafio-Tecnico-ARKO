@@ -41,9 +41,14 @@ Criar um usuario do tipo administrador
 python manage.py createsuperuser
 ```
 
-Popular o banco com os dados
+Popular o banco com os dados do IBGE
 ```
 python manage.py ibge_import
+```
+Popular o banco com os dados de empresas
+```
+Adcione o arquivo CSV para a pasta imports
+python manage.py companies_import
 ```
 
 Executar o servidor de desenvolvimento
@@ -62,3 +67,5 @@ O projeto se utiliza da ferramenta task para criar scripts com os comandos funda
   Executa as migrations no banco de dados.
 - **`task ibge`**  
   Popular ou atualiza o banco com os dados do IBGE.
+- **`task companies`**  
+  Popular ou atualiza o banco com os dados de empresas.

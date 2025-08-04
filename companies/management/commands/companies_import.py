@@ -33,7 +33,7 @@ class Command(BaseCommand):
         
     def open_csv(self):
         self.stdout.write(self.style.NOTICE('Processando dados do CSV'))
-        temp_dir = os.path.join(settings.BASE_DIR, 'utils', 'tmp')
+        temp_dir = os.path.join(settings.BASE_DIR, 'imports', 'tmp')
 
         if os.path.exists(temp_dir):
             shutil.rmtree(temp_dir)
@@ -41,10 +41,10 @@ class Command(BaseCommand):
 
         chunk_number = 1
 
-        files = glob.glob(os.path.join(settings.BASE_DIR, 'utils', '*'))
+        files = glob.glob(os.path.join(settings.BASE_DIR, 'imports', '*'))
 
         if not files:
-            raise Exception("Nenhum arquivo CSV encontrado na pasta 'utils'.")
+            raise Exception("Nenhum arquivo CSV encontrado na pasta 'imports'.")
 
         for chunk in pandas.read_csv(
             files[0],
@@ -81,7 +81,7 @@ class Command(BaseCommand):
         Company = apps.get_model('companies', 'Company')
         table_name = Company._meta.db_table
 
-        temp_dir = os.path.join(settings.BASE_DIR, 'utils', 'tmp')
+        temp_dir = os.path.join(settings.BASE_DIR, 'imports', 'tmp')
         chunk_files = sorted(glob.glob(os.path.join(temp_dir, 'chunk_*.csv')))
 
         if not chunk_files:
