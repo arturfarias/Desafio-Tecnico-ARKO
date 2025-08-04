@@ -16,3 +16,6 @@ def login(request):
 
     return render(request, 'login/index.html')
 
+def about(request):
+    return render(request, 'about/index.html')
+

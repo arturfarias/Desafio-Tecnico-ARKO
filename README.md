@@ -56,6 +56,11 @@ Executar o servidor de desenvolvimento
 python manage.py runserver
 ```
 
+Criando um usuario para logar no sistema
+```
+python manage.py createsuperuser
+```
+
 ## Comandos basicos
 O projeto se utiliza da ferramenta task para criar scripts com os comandos fundamentais que podem ser vistos abaixo:
 
@@ -69,3 +74,5 @@ O projeto se utiliza da ferramenta task para criar scripts com os comandos funda
   Popular ou atualiza o banco com os dados do IBGE.
 - **`task companies`**  
   Popular ou atualiza o banco com os dados de empresas.
+
+## Imagens do projeto

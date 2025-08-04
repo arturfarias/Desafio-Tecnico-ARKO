@@ -1,0 +1,61 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Sobre - Formulário{% endblock %}
+
+{% block content %}
+
+<div class="page-header mb-4">
+    <h3 class="page-title">
+        <span class="page-title-icon bg-gradient-primary text-white me-2">
+            <i class="fa fa-user"></i>
+        </span> Sobre
+    </h3>
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                Overview <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="container" style="max-width: 600px;">
+    <form>
+        <div class="mb-4 text-center">
+            <h2>Me chamo Artur S. Farias!</h2>
+            <p>Amo programar e aprender coisas novas.</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Nome</label>
+            <input type="text" class="form-control" id="name" value="Artur S. Farias" readonly>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label fw-bold">Descrição</label>
+            <textarea class="form-control" id="description" rows="3" readonly>Amo programar e aprender coisas novas.</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="current-goals" class="form-label fw-bold">Objetivos atuais</label>
+            <ul class="list-group">
+                <li class="list-group-item">🔭 Atualmente estou em busca de um novo trabalho como desenvolvedor de software.</li>
+                <li class="list-group-item">🌱 Atualmente estou aprendendo sobre Arquitetura limpa, Código limpo, Engenharia de software em geral, React, React Native e outras coisas relacionadas ao backend e devops.</li>
+            </ul>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-bold">Contato</label>
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="mailto:artur06farias@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-sm d-flex align-items-center gap-2">
+                    <i class="fa fa-envelope"></i> artur06farias@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/artur-s-farias/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm d-flex align-items-center gap-2">
+                    <i class="fab fa-linkedin"></i> Linkedin
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
