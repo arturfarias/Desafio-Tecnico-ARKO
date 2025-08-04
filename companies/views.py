@@ -1,10 +1,10 @@
-from django.shortcuts import render
 from utils.pagination import paginate_and_render
+from django.contrib.auth.decorators import login_required
 
 from .models import Company
 
+@login_required
 def companies(request):
-
     query = {
         'cnpj': request.GET.get('filter_cnpj', ''),
         'name': request.GET.get('filter_social', ''),

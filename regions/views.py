@@ -1,8 +1,10 @@
-from django.shortcuts import render
 from utils.pagination import paginate_and_render
+from django.contrib.auth.decorators import login_required
+
 
 from .models import State, Municipality, District
 
+@login_required()
 def state(request):
     states = State.objects.select_related('region').all().order_by('name')
 
@@ -13,7 +15,7 @@ def state(request):
 
     return paginate_and_render(request, states, 'state/index.html')
 
-
+@login_required()
 def municipalities(request):
     municipalities = (
         Municipality.objects
@@ -30,7 +32,7 @@ def municipalities(request):
 
     return paginate_and_render(request, municipalities, 'municipalities/index.html')
 
-
+@login_required()
 def districts(request):
     districts = (
         District.objects
