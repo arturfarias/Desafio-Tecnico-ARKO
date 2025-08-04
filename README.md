@@ -76,3 +76,10 @@ O projeto se utiliza da ferramenta task para criar scripts com os comandos funda
   Popular ou atualiza o banco com os dados de empresas.
 
 ## Imagens do projeto
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="https://github.com/arturfarias/Desafio-Tecnico-ARKO/blob/main/img/img1.png" width="150" alt="Imagem 1" />
+  <img src="https://github.com/arturfarias/Desafio-Tecnico-ARKO/blob/main/img/img2.png" width="150" alt="Imagem 2" />
+  <img src="https://github.com/arturfarias/Desafio-Tecnico-ARKO/blob/main/img/img3.png" width="150" alt="Imagem 3" />
+  <img src="https://github.com/arturfarias/Desafio-Tecnico-ARKO/blob/main/img/img4.png" width="150" alt="Imagem 4" />
+  <img src="https://github.com/arturfarias/Desafio-Tecnico-ARKO/blob/main/img/img5.png" width="150" alt="Imagem 5" />
+</div>
