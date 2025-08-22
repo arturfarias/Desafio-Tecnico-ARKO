@@ -1,6 +1,5 @@
-## Instalação e configuração do ambiente
-o projeto depende do Poetry para seu gerenciamento e precisa ser devidamente instalado e configurado.
-
+## Instalação e configuração do ambiente via poetry
+O projeto depende do Poetry para seu gerenciamento e precisa ser devidamente instalado e configurado.
 
 Para instalar o poetry execute em ordem os comandos:
 ```
@@ -21,12 +20,47 @@ Com o ambiente ativado basta instalar as dependencias co o comando:
 poetry install
 ```
 
+## Instalação e configuração do ambiente via pip
+Caso não queria utilizar o poetry segue a lista de dependencias a serem baixadas via pip
+```
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install django
+pip install psycopg2-binary
+pip install requests
+pip install pandas
+```
+
+
 ## Subindo banco no docker
 O projeto esta configurado com um banco de testes para o PostgreSQL, que pode ser baixado viar docker
 ```
 docker run --name test_db -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=test_db -p 5432:5432 -d postgres:15
-
 ```
+Caso deseje usar outras configurações do banco os dados cadastraos são:
+```
+'NAME': 'test_db',
+'USER': 'user',
+'PASSWORD': 'password',
+'HOST': 'localhost',
+'PORT': '5432',
+```
+Tambem pode ser configurado em config/settings.py na linha 78
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'test_db',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
+
+
 
 ## Executando aplicação
 Para poder executar o projeto pela primeira vez é necessario executar os comandos abaixo
@@ -51,14 +85,14 @@ Adcione o arquivo CSV para a pasta imports
 python manage.py companies_import
 ```
 
-Executar o servidor de desenvolvimento
-```
-python manage.py runserver
-```
-
 Criando um usuario para logar no sistema
 ```
 python manage.py createsuperuser
+```
+
+Executar o servidor de desenvolvimento
+```
+python manage.py runserver
 ```
 
 ## Comandos basicos
