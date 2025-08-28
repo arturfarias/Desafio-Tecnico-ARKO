@@ -60,7 +60,8 @@ DATABASES = {
 }
 ```
 
-
+## Template
+Para o css extraia dentro da pasta assets o arquivo zip denomidado template, dentro desta pasta deve ficar duas pastas, umas demoninada css e outra vendors
 
 ## Executando aplicação
 Para poder executar o projeto pela primeira vez é necessario executar os comandos abaixo
