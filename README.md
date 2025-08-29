@@ -8,6 +8,8 @@ pipx ensurepath
 
 pipx install poetry
 poetry python install 3.13
+
+#Dentro da pasta do projeto
 poetry env use 3.13
 poetry self add poetry-plugin-shell
 ```
