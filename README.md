@@ -4,6 +4,7 @@ O projeto depende do Poetry para seu gerenciamento e precisa ser devidamente ins
 Para instalar o poetry execute em ordem os comandos:
 ```
 sudo apt install pipx
+pipx ensurepath
 
 pipx install poetry
 poetry python install 3.13
