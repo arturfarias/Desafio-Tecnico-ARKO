@@ -19,7 +19,7 @@ Para ativar o ambiente:
 poetry shell
 ```
 
-Com o ambiente ativado basta instalar as dependencias co o comando:
+Com o ambiente ativado basta instalar as dependencias com o comando:
 ```
 poetry install
 ```
